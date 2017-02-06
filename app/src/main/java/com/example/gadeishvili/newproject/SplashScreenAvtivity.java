@@ -7,19 +7,23 @@ import android.support.v7.app.AppCompatActivity;
 
 public class SplashScreenAvtivity extends AppCompatActivity {
 
-    private final int splashTime = 600;
+    private final int splashTime = 1500;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash_screen_avtivity);
 
-        new Handler().postDelayed(new Runnable() {
+        Runnable runnable = new Runnable() {
             @Override
             public void run() {
                 startActivity(new Intent(SplashScreenAvtivity.this, MainActivity.class));
-                finish();
+                SplashScreenAvtivity.this.finish();
             }
-        }, splashTime);
+        };
+
+        Handler handler = new Handler();
+        handler.postDelayed(runnable, splashTime);
+
     }
 }
