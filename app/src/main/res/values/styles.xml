@@ -8,4 +8,9 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="redStyleNegga" >
+        <item name="android:textColor">@color/rezoRed</item>
+        <item name="android:background">@drawable/shape_round_corners</item>
+    </style>
+
 </resources>

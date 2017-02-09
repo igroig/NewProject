@@ -41,9 +41,7 @@ public class MainActivity extends AppCompatActivity {
         fLanguages.setVisibility(View.VISIBLE);
         getSupportFragmentManager().beginTransaction().setCustomAnimations(R.anim.slide_up_dialog, 0, 0, R.anim.slide_down_dialog).addToBackStack(null)
                 .replace(R.id.fLanguages, fragment).commit();
-
     }
-
 
     @Override
     protected void onResume() {
